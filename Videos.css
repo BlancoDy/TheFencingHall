@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Garamond', 'EB Garamond', serif; /* Fallback to EB Garamond if Garamond is not available */
+}
+
+body {
+    background-image: url('images/backround.jpg'); /* Replace with your background image URL */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body takes full height */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #002b5c; /* Navbar background color */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    width: 50px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and site name */
+}
+
+.site-name {
+    font-size: 24px; /* Font size for the site name */
+    font-weight: bold; /* Make the site name bold */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px; /* Increased font size for nav links */
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #D4AF37; /* Change color on hover */
+}
+
+/* Toggle Button */
+.toggle-button {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position links absolutely */
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        background-color: #002b5c; /* Background color for dropdown */
+        width: 100%; /* Full width */
+        padding: 10px 0; /* Padding for links */
+    }
+
+    .nav-links a {
+        padding: 10px 20px; /* Padding for links */
+        text-align: center; /* Center align text */
+        font-size: 18px; /* Font size for mobile view */
+    }
+
+    .toggle-button {
+        display: block; /* Show toggle button on small screens */
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Show links when navbar is active */
+    }
+}
+/* Running Header */
+.running-header {
+    background-color: #ffa500; /* Running header background color */
+    color: #002b5c; /* Running header text color */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    animation: slide 10s linear infinite; /* Animation for running header */
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto; /* Center the container */
+    flex: 1; /* Allow the container to grow and fill available space */
+    text-align: center;
+    padding: 20px; /* Add padding to avoid content touching edges */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.episode-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between episodes */
+}
+
+.episode {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: wheat; /* Background color for episodes */
+    transition: box-shadow 0.3s; /* Transition for shadow effect */
+}
+
+.episode:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.episode-image {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius:

@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+     background-image: url('images/Vinlandbackround\ 1.jpg'); /* Replace with your background image URL */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #333;
+
+/* Navbar */
+.navbar {
+   
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #002b5c;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffa500;
+}
+
+/* Toggle Button */
+.toggle-button {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        background-image: url('images/Revenger.jpg'); /* Replace with your background image URL */
+        background-size: cover; /* Cover the entire body */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position links absolutely */
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        background-color: #002b5c; /* Background color for dropdown */
+        width: 100%; /* Full width */
+        padding: 10px 0; /* Padding for links */
+    }
+
+    .navbar .nav-links a {
+        padding: 10px 20px; /* Padding for links */
+        text-align: center; /* Center align text */
+    }
+
+    .toggle-button {
+        display: block; /* Show toggle button on small screens */
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Show links when navbar is active */
+    }
+}
+/* Running Header */
+.running-header {
+    background-color: #ffa500;
+    color: #002b5c;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background-image: url('https://source.unsplash.com/1600x900/?school');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color  0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #ff8c00;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    margin-bottom: 20px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-images img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Newsroom Section */
+.newsroom {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.newsroom h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #333;
+}
+
+.article {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.article img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 15px; /* Space between image and text */
+}
+
+.article h3 {
+    font-size: 24px;
+    color: #007BFF;
+}
+
+.article p {
+    font-size: 16px;
+    color: #555;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Academics Section */
+.header-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.header-image img {
+    width: 100%; /* Full width for header image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.junior-high, .senior-high {
+    padding: 40px 20px;
+    background-color: #f4f4f9; /* Light background for contrast */
+    border-radius: 10px;
+    margin: 20px 0; /* Space between sections */
+}
+
+.program, .strand {
+    margin: 15px 0;
+    padding: 20px;
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px;
+    background-color: #fff; /* White background for programs/strands */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.more-info {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF; /* Blue background for the link */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.more-info:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 20px 0; /* Space between sections */
+    text-align: center; /* Center align text */
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    color: #333; /* Dark color for headings */
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px;
+    background-color: #fff; /* White background for testimonials */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #002b5c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Ensure footer is positioned correctly */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
